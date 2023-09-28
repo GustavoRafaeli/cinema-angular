@@ -18,18 +18,6 @@ export class ListarFilmesComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.filmeService.selecionarFilmePorPopularidade().subscribe((filmes: ListagemFilme[]) => {
-      this.filmesPorPopularidade = filmes;
-    })
-
-    this.filmeService.selecionarFilmeLancamento().subscribe((filmes: ListagemFilme[]) => {
-      this.filmesLancamentos = filmes;
-    })
-
-    this.filmeService.selecionarFilmeEmBreve().subscribe((filmes: ListagemFilme[]) => {
-      this.filmesEmBreve = filmes;
-    })
-
     const filmes = this.favoritoService.obterListaFav();
     let contador: number = 0;
 

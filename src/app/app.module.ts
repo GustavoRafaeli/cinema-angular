@@ -9,13 +9,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetalhesFilmeComponent } from './components/detalhes-filme/detalhes-filme.component';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { allIcons } from 'ngx-bootstrap-icons';
+import { EmAltaFilmeComponent } from './shared/em-alta/em-alta.component';
+import { LancamentoFilmeComponent } from './shared/lancamentos/lancamentos.component';
+import { EmBreveComponent } from './shared/em-breve/em-breve.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ListarFilmesComponent,
-    DetalhesFilmeComponent
+    DetalhesFilmeComponent,
+    EmAltaFilmeComponent,
+    LancamentoFilmeComponent,
+    EmBreveComponent,
   ],
   imports: [
     BrowserModule,

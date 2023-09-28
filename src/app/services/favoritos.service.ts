@@ -38,7 +38,7 @@ export class FavoritosService{
 
   public selecionarFilmePorId(id: number): Observable<ListagemFilme> {
     const url = `https://api.themoviedb.org/3/movie/${id}?language=pt-BR`;
-  
+
     return this.http.get<ListagemFilme[]>(url, this.obterHeaders())
       .pipe(
         map((dados: any) => this.MapearFilmes(dados))
@@ -51,10 +51,11 @@ export class FavoritosService{
       objeto.title,
       objeto.overview,
       objeto.poster_path,
-      objeto.backdrop_path
+      objeto.backdrop_path,
+      objeto.total_pages
     );
   }
-  
+
 
   private obterHeaders() {
     return {
